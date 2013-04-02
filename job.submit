@@ -1,0 +1,15 @@
+Universe        = vanilla
+Executable      = run.sh
+Output          = tmp/run.out
+Error           = tmp/run.error
+Log             = tmp/run.log
+Arguments       = $(Process)
+#requirements = SlotID == 6 (Machine == "particle.udea.edu.co")
+requirements = (Machine != "particle.udea.edu.co")
+ShouldTransferFiles = Yes
+WhenToTransferOutput = ON_EXIT
+transfer_input_files = benchmark.tar.gz
+transfer_output_files =  benchmark/SPheno$(Process).spc
+queue 10
+
+

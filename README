@@ -1,0 +1,11 @@
+#The main program SPheno_random requires 
+#one numerical argumet in order to diffentiate their output
+#file.
+# The tar.gz with the benchmark directory need to be created
+#first:
+tar -zcvf benchmark.tar.gz benchmark
+#Launch condor
+mkdir -p tmp
+condor_submit job.submit
+
+
